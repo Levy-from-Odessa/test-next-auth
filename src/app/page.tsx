@@ -16,6 +16,8 @@ export default async function Home() {
       </span>
     </div>)
   }
+
+  console.log('the app is running')
   
   return (
     <div className="drop-shadow-md w-4/12 h-4/12 m-auto mt-10 bg-slate-200 place-content-center p-3">
