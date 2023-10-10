@@ -10,7 +10,7 @@ export default async function Home() {
 
   const userImage = () => {
     return (<div className="flex w-full mb-3">
-      <img src={session?.user?.image || ''} alt="user's image" className="w-12 h-12" />
+      <Image src={session?.user?.image || ''} alt="user's image" className="w-12 h-12" width={3} height={3} />
       <span className="ml-3">
         name - {session?.user?.name}
       </span>

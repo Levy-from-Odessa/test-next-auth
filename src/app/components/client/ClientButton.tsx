@@ -10,7 +10,7 @@ const SignOut = () => {
 
   return (
     <button
-      onClick={() => isLoggedIn ? signOut() : signIn}
+      onClick={() => isLoggedIn ? signOut() : signIn()}
       className="bg-sky-500 rounded-xl p-3"
     >
       {isLoggedIn ? "Sign Out" : "Sign In"}

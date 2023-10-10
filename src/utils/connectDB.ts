@@ -1,10 +1,10 @@
 import mongoose from 'mongoose'
 
-if(!process.env.DATABASE_URL){
-  throw new Error('Please define the DATABASE_URL environment variable inside .env.local')
+if(!process.env.MONGODB_URI){
+  throw new Error('Please define the MONGODB_URI environment variable inside .env.local')
 }
 
-const DATABASE_URL: string = process.env.DATABASE_URL
+const MONGODB_URI: string = process.env.MONGODB_URI
 
 let globalWithMongoose = global as typeof globalThis & {mongoose: any} 
 
@@ -24,7 +24,7 @@ export async function connectDB() {
       useUnifiedTopology: true,
     }
     cached.promise = mongoose
-      .connect(DATABASE_URL, options)
+      .connect(MONGODB_URI, options)
       .then((mongoose) => {
         console.log('Connected to DB', mongoose.connection.readyState); 
         return mongoose
