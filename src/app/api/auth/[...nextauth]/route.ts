@@ -27,9 +27,6 @@ const authOptions = {
       clientSecret: process.env.GITHUB_SECRET as string,
     }),
   ],
-  session: {
-    strategy: "jwt"
-  },
   callbacks: {
     jwt: ({ token, user }: {token: any, user: any}) => ({
       ...token,
